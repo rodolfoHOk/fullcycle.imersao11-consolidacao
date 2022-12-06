@@ -6,6 +6,7 @@
 
 - Go
 - MySQL
+- Kafka
 
 ## Guia
 
@@ -46,4 +47,8 @@
         go mod init github.com/rodolfoHOk/fullcycle.imersao11-consolidacao
         go mod tidy
 
-## Links repositórios
+- Baixar as dependências:
+
+        go mod tidy
+
+## Links dos repositórios da Imersão
