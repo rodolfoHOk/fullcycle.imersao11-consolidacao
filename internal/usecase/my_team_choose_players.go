@@ -9,7 +9,7 @@ import (
 )
 
 type MyTeamChoosePlayersInput struct {
-	ID        string   `json:"my_team_id"`
+	ID string `json:"my_team_id"`
 	PlayersID []string `json:"players"`
 }
 
