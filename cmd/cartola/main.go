@@ -10,6 +10,8 @@ import (
 	"github.com/rodolfoHOk/fullcycle.imersao11-consolidacao/internal/infra/repository"
 	"github.com/rodolfoHOk/fullcycle.imersao11-consolidacao/pkg/uow"
 
+	"github.com/go-chi/chi"
+
 	_ "github.com/go-sql-driver/mysql"
 )
 
@@ -26,9 +28,10 @@ func main() {
 	}
 	registerRepositories(uow)
 
-	http.HandleFunc("/players", httpHandler.ListPlayersHandler(ctx, *db.New(dtb)))
-
-	if err = http.ListenAndServe(":8080", nil); err != nil {
+	r := chi.NewRouter()
+	r.Get("/players", httpHandler.ListPlayersHandler(ctx, *db.New(dtb)))
+	
+	if err = http.ListenAndServe(":8080", r); err != nil {
 		panic(err)
 	}
 }
