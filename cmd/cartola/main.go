@@ -30,6 +30,10 @@ func main() {
 
 	r := chi.NewRouter()
 	r.Get("/players", httpHandler.ListPlayersHandler(ctx, *db.New(dtb)))
+	r.Get("/my-teams/{teamID}/players", httpHandler.ListMyTeamPlayers(ctx, *db.New(dtb)))
+	r.Get("/my-teams/{teamID}/balance", httpHandler.GetMyTeamBalanceHandler(ctx, *db.New(dtb)))
+	r.Get("/matches", httpHandler.ListMatchesHandler(ctx, repository.NewMatchRepository(dtb)))
+	r.Get("/matches/{matchID}", httpHandler.ListMatchByIDHandler(ctx, repository.NewMatchRepository(dtb)))
 	
 	if err = http.ListenAndServe(":8080", r); err != nil {
 		panic(err)
