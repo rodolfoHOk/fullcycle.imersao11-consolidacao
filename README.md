@@ -2,6 +2,11 @@
 
 > Microsserviço de Consolidação
 
+## Tecnologias
+
+- Go
+- MySQL
+
 ## Guia
 
 - Instalação do Go:
@@ -41,4 +46,4 @@
         go mod init github.com/rodolfoHOk/fullcycle.imersao11-consolidacao
         go mod tidy
 
--
+## Links repositórios
