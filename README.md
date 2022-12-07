@@ -52,3 +52,6 @@
         go mod tidy
 
 ## Links dos repositórios da Imersão
+
+- https://github.com/rodolfoHOk/fullcycle.imersao11-consolidacao
+- https://github.com/rodolfoHOk/fullcycle.imersao11-django
