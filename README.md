@@ -2,11 +2,16 @@
 
 > Microsserviço de Consolidação
 
-## Tecnologias
+## Principais Tecnologias
 
 - Go
 - MySQL
 - Kafka
+
+### Bibliotecas adicionais
+
+- github.com/go-chi/chi
+- github.com/google/uuid
 
 ## Guia
 
