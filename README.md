@@ -56,6 +56,14 @@
 
         go mod tidy
 
+- Entrar no bash do container:
+
+        docker compose exec goapp bash
+
+- Comando para executar as migrações:
+
+        migrate -source file:///go/app/sql/migrations -database 'mysql://root:root@tcp(mysql:3306)/cartola' up
+
 ## Links dos repositórios da Imersão
 
 - https://github.com/rodolfoHOk/fullcycle.imersao11-consolidacao

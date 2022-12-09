@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/go-chi/chi"
+	"github.com/go-chi/chi/v5"
 	irepository "github.com/rodolfoHOk/fullcycle.imersao11-consolidacao/internal/domain/repository"
 	"github.com/rodolfoHOk/fullcycle.imersao11-consolidacao/internal/infra/db"
 	"github.com/rodolfoHOk/fullcycle.imersao11-consolidacao/internal/infra/presenter"
